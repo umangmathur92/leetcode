@@ -18,9 +18,10 @@ public class TaskScheduler {
 
     public static int leastInterval(char[] tasks, int n) {
         int[] map = new int[26];
-        for (char c: tasks) {
-            map[c - 'A']++;
+        for (char ch: tasks) {
+            map[ch - 'A']++;
         }
+        //priority queue to keep track of task with highest remaining amount
         PriorityQueue<Integer> queue = new PriorityQueue<>(26, Collections.reverseOrder());
         for (int f: map) {
             if (f > 0) {

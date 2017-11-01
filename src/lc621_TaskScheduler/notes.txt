@@ -1,0 +1,2 @@
+Heap is a semi-ordered tree-based data structure
+2 types of heaps: Max-Heap, Min-Heap
