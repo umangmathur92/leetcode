@@ -10,7 +10,20 @@ import java.util.PriorityQueue;
 public class TaskScheduler {
 
     public static void main(String[] args) {
-        char[] tasks = {'A','A','A','B','B','B','C','C','D','D','D','D'};
+        char[] tasks = {
+                'A',
+                'A',
+                'A',
+                'B',
+                'B',
+                'B',
+                'C',
+                'C',
+                'D',
+                'D',
+                'D',
+                'D'
+        };
         int n = 3  ;
         int numOfIntervals = leastInterval(tasks, n);
         Util.print("Number of intervals : " + numOfIntervals);
