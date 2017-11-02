@@ -21,8 +21,7 @@ public class SlidingWindowMaximum {
         }
         int inputArrLength = inputArr.length;
         int[] outputArr = new int[inputArrLength - windowSize + 1];
-        int ri = 0;
-        // store index
+        int ri = 0;// store index
         Deque<Integer> deque = new ArrayDeque<>();
         for (int i = 0; i < inputArr.length; i++) {
             // remove numbers out of range of window
