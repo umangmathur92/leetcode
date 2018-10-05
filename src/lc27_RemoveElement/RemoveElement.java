@@ -2,6 +2,8 @@ package lc27_RemoveElement;
 
 import Utils.Util;
 
+import java.util.Arrays;
+
 public class RemoveElement {
 
     public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class RemoveElement {
         int valToBeRemoved = 3;
         int lengthOfArrWithoutElement = removeElement(integerArr, valToBeRemoved);
         Util.print("Length of array without particular value : " + lengthOfArrWithoutElement);
+        Util.print(Arrays.toString(integerArr));
     }
 
     public static int removeElement(int[] nums, int val) {

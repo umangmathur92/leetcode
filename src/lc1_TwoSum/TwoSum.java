@@ -3,18 +3,19 @@ package lc1_TwoSum;
 import Utils.Util;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class TwoSum {
 
     public static void main(String[] args) {
-        int[] inputArr = {3,3};
-        Util.print(Arrays.toString(twoSumX(inputArr, 6)));
+        int[] inputArr = {2,7,11,15};
+        Util.print(Arrays.toString(twoSumX(inputArr, 9)));
     }
 
-    public static int[] twoSumX(int[] nums, int target) {
-        Map<Integer, Integer> map = new LinkedHashMap<>();
+    private static int[] twoSumX(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i=0; i<nums.length; i++) {
             map.put(nums[i], i);
         }

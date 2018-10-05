@@ -5,7 +5,7 @@ import Utils.Util;
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
-        String[] strs = {"leet", "leetcode", "leetcode.com", "leetwhatever", "cleet"};
+        String[] strs = {"leet", "leezzode", "leetcode.com", "lemwhatever", "leetzzz"};
         String lcp = longestCommonPrefix(strs);
         Util.print("Longest Common Prefix is : " + lcp);
     }
@@ -14,11 +14,11 @@ public class LongestCommonPrefix {
         String prefix = "";
         for (int i = 0; i < strs.length; i++) {
             String currStr = strs[i];
-            if (i==0) {
+            if (i == 0) {
                 prefix = currStr;
             }
             while (!currStr.startsWith(prefix)) {
-                prefix = prefix.substring(0, prefix.length()-1);
+                prefix = prefix.substring(0, prefix.length() - 1);
             }
             if (prefix.equals("")) {
                 return "";
@@ -26,4 +26,5 @@ public class LongestCommonPrefix {
         }
         return prefix;
     }
+
 }

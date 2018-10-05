@@ -28,4 +28,20 @@ public class ImplementStrStr {
         }
         return -1;
     }
+
+    private static int strStrz(String haystack, String needle) {
+        if (needle.length()==0) {
+            return 0;
+        }
+        for (int i=0; i<haystack.length(); i++) {
+            int endIndex = i + needle.length();
+            if (endIndex > haystack.length()) {
+                return -1;
+            }
+            if (haystack.substring(i, endIndex).equals(needle)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
