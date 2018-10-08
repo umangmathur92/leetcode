@@ -1,4 +1,4 @@
-package lc_7_ReverseInteger.sol1;
+package lc7_ReverseInteger.sol1;
 
 import Utils.Util;
 

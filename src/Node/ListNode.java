@@ -1,4 +1,4 @@
-package lc2_AddTwoNumbers;
+package Node;
 
 //Definition for singly-linked list.
 public class ListNode {

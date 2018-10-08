@@ -1,7 +1,7 @@
 package lc21_MergeTwoSortedLists;
 
 import Utils.Util;
-import lc2_AddTwoNumbers.ListNode;
+import Node.ListNode;
 
 public class MergeTwoSortedLists {
 
