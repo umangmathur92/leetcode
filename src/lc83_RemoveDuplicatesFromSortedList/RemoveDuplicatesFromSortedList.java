@@ -1,21 +1,21 @@
 package lc83_RemoveDuplicatesFromSortedList;
 
-import Node.ListNode;
+import Node.Node;
 import Utils.Util;
 
 public class RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(1).setNext(new ListNode(1).setNext(new ListNode(2).setNext(new ListNode(3).setNext(new ListNode(3)))));
-        ListNode listNode = deleteDuplicates(l1);
-        Util.print(listNode.toString());
+        Node l1 = new Node(1).setNext(new Node(1).setNext(new Node(2).setNext(new Node(3).setNext(new Node(3)))));
+        Node node = deleteDuplicates(l1);
+        Util.print(node.toString());
     }
 
-    public static ListNode deleteDuplicates(ListNode head) {
+    public static Node deleteDuplicates(Node head) {
         if (head == null) {
             return head;
         }
-        ListNode currNode = head;
+        Node currNode = head;
         while (currNode.next!=null) {
             if (currNode.val==currNode.next.val) {
                 currNode.next = currNode.next.next;

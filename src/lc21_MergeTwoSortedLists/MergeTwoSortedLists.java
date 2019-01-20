@@ -1,18 +1,18 @@
 package lc21_MergeTwoSortedLists;
 
 import Utils.Util;
-import Node.ListNode;
+import Node.Node;
 
 public class MergeTwoSortedLists {
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2).setNext(new ListNode(4)).setNext(new ListNode(7));
-        ListNode l2 = new ListNode(1).setNext(new ListNode(5)).setNext(new ListNode(9));
-        ListNode mergedList = mergeTwoLists(l1, l2);
+        Node l1 = new Node(2).setNext(new Node(4)).setNext(new Node(7));
+        Node l2 = new Node(1).setNext(new Node(5)).setNext(new Node(9));
+        Node mergedList = mergeTwoLists(l1, l2);
         Util.print(mergedList.toString());
     }
 
-    private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    private static Node mergeTwoLists(Node l1, Node l2) {
         if (l1 == null) {
             return l2;
         } else if (l2 == null) {

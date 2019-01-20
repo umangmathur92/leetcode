@@ -21,12 +21,27 @@ import java.util.Arrays;
 public class PlusOne {
 
     public static void main(String[] args) {
-        int[] inputArr = {1,2,3};
+        int[] inputArr = {9,9,9};
         int[] outputArr = plusOne(inputArr);
         Util.print(Arrays.toString(outputArr));
     }
 
-    public static int[] plusOne(int[] digits) {
+    private static int[] plusOne(int[] digits) {
+        int inputLen = digits.length;
+        for(int i=inputLen-1; i>=0; i--) {
+            if(digits[i]<9) {
+                digits[i] = digits[i] + 1;
+                return digits;
+            } else {
+                digits[i]=0;
+            }
+        }
+        int[] newOutputArr = new int[inputLen+1];
+        newOutputArr[0] = 1;
+        return newOutputArr;
+    }
+
+    private static int[] plusOneX(int[] digits) {
         int inputArrLen = digits.length;
         int indexOfLastNum = inputArrLen - 1;
         int lastDigit = digits[indexOfLastNum];

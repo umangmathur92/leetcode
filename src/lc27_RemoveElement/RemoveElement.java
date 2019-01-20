@@ -13,8 +13,19 @@ public class RemoveElement {
         Util.print("Length of array without particular value : " + lengthOfArrWithoutElement);
         Util.print(Arrays.toString(integerArr));
     }
+    private static int removeElement(int[] nums, int val) {
+        int index = 0;
+        for(int i = 0; i < nums.length; i++) {
+            int currNum = nums[i];
+            if(currNum!=val) {
+                nums[index] = currNum;
+                index++;
+            }
+        }
+        return index;
+    }
 
-    public static int removeElement(int[] nums, int val) {
+    private static int removeElementX(int[] nums, int val) {
         int i=0;
         for (int j=0; j<nums.length; j++) {
             if(nums[j]!=val) {

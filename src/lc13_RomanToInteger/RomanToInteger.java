@@ -8,11 +8,37 @@ import java.util.Map;
 public class RomanToInteger {
 
     public static void main(String[] args) {
-        int num = romanToIntz("XXIX");
+        int num = romanToInt("XXIX");
         Util.print("Integer is : " + num);
     }
 
-    public static int romanToInt(String s) {
+    private static int romanToInt(String s) {
+        int outputNum = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+        char[] inputCharArr = s.toCharArray();
+        int len = inputCharArr.length;
+        int prevNum = 0;
+        for (int i = len - 1; i >= 0; i--) {
+            char currChar = inputCharArr[i];
+            int currNum = map.get(currChar);
+            if (currNum < prevNum) {
+                outputNum = outputNum - currNum;
+            } else {
+                outputNum = outputNum + currNum;
+            }
+            prevNum = currNum;
+        }
+        return outputNum;
+    }
+
+    public static int romanToIntX(String s) {
         int outputNum = 0;
         Map<String, Integer> map = new HashMap<>();
         map.put("I", 1);
@@ -37,7 +63,7 @@ public class RomanToInteger {
         return outputNum;
     }
 
-    public static int romanToIntz(String s) {
+    public static int romanToIntY(String s) {
         int outputNum = 0;
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
@@ -60,4 +86,5 @@ public class RomanToInteger {
         }
         return outputNum;
     }
+
 }
