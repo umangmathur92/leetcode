@@ -26,7 +26,26 @@ public class MergeSortedArray {
         Util.print(Arrays.toString(nums1));
     }
 
-    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge(int[] firstArr, int len1, int[] secondArr, int len2) {
+        int i = len1 - 1;
+        int j = len2 - 1;
+        int k = len1 + len2 - 1;
+        while (i >= 0 && j >= 0) {
+            if (firstArr[i] >= secondArr[j]) {
+                firstArr[k--] = firstArr[i--];
+            } else {
+                firstArr[k--] = secondArr[j--];
+            }
+        }
+        while (i >= 0) {
+            firstArr[k--] = firstArr[i--];
+        }
+        while (j >= 0) {
+            firstArr[k--] = secondArr[j--];
+        }
+    }
+
+    public static void mergeX(int[] nums1, int m, int[] nums2, int n) {
         int x = m + n - 1;
         int i = m - 1;
         int j = n - 1;
